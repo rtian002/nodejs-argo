@@ -11,5 +11,7 @@ RUN apk update && apk upgrade &&\
     apk add --no-cache bash &&\
     chmod +x index.js &&\
     npm install
+RUN mkdir public &&\
+    cp index.html public
 
 CMD ["node", "index.js"]
